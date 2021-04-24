@@ -10,7 +10,7 @@ const GrapesEditor = dynamic(
 )
 
 const Index = () => (
-  <Page>
+  <Page fullWidth>
     <Heading>I like paintball</Heading>
     <GrapesEditor/>
   </Page>
