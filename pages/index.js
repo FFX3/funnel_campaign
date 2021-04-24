@@ -1,10 +1,18 @@
 import { Heading, Page } from "@shopify/polaris";
-import GrapeEditorWrapper from '../components/grapesjs/GrapeEditor'
+// import GrapesEditor from '../components/grapesjs/GrapesEditor'
+import dynamic from 'next/dynamic'
+
+const GrapesEditor = dynamic(
+  () => {
+    return import('../components/grapesjs/GrapesEditor')
+  },
+  {ssr: false}
+)
 
 const Index = () => (
   <Page>
     <Heading>I like paintball</Heading>
-    <GrapeEditorWrapper></GrapeEditorWrapper>
+    <GrapesEditor/>
   </Page>
 );
 
